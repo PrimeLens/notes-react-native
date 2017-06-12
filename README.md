@@ -12,11 +12,11 @@
 - apple developer account
 - homebrew
 - node js
-- watchman, RN uses this to watch sourcefiles for changes, `brew install watchman`
+- watchman, RN uses this to watch source files for changes, `brew install watchman`
 - react native cli, install using `sudo npm install -g react-native-cli`
 - check installations by using 
   - `node --version`
-  - `watchnman --version`
+  - `watchman --version`
   - `react-native --version`
 
 ### iOS Setting up a new app
@@ -59,7 +59,7 @@
 - check installations by using 
   - `javac -version`
   - `node --version`
-  - `watchnman --version`
+  - `watchman --version`
   - `react-native --version`
 
 ### Installing the Android Studio
@@ -68,9 +68,9 @@
 - when you have the "Welcome to Android Studio" click Configure bottom right corner as we need to select the SDK manager to install a previous SDK
 - from the list select 6.0 Marshmallow and check the Show Package Details box, under 6.0 select
   - Google API's
-  - Intex x86 Atom System Image
+  - Intel x86 Atom System Image
   - Intel x86 Atom_64 System Image
-  - Google API's Intex x86 Atom_64 System Image
+  - Google API's Intel x86 Atom_64 System Image
 - before hitting Apply/Ok go the the 2nd tab titled "SDK Tools", then check Show Package Details box
   - check the Build Tool 23.0.1
 - Hit the Apply button and accept the agreement, let it install before hitting finish
@@ -89,20 +89,23 @@ Append these lines to bash_profile, save the file and *restart your terminal win
 
 ### (AVD) Android Virtual Device Manager
 
-- To launch, supposed to be `android avd` from the command line but this way is depricated. Instead, _open a temporary new project_ in Android Studio and go top menu Tools > Android > AVD Manager
+- To launch, supposed to be `android avd` from the command line but this way is deprecated. Instead, _open a temporary new project_ in Android Studio and go top menu Tools > Android > AVD Manager
 - To create Virtual Device, hit create button, you can download imges. Wait a bit when hitting "Finish" it looks like it crashes but its just lag with not alert spinner.
 
 ### Running the default Hello World app in Android Studio
 
-- launch Android Studio and select 'open existing projecct' and open the android folder within the project, NOT the project itself.
+- launch Android Studio and select 'open existing project' and open the android folder within the project, NOT the project itself.
 
-- to the right of the green 'play' triange is a smaller green triange with a bug symbol (which means play with debug)  click that, select which emulator you want (set up previously)
+- to the right of the green 'play' triangle is a smaller green triangle with a bug symbol (which means play with debug)  click that, select which emulator you want (set up previously)
 
 - sometimes the app might need to be reloaded, use Command M to get the reload screen
 
-- to get console logs its the same as xcode where you load the debugger throug the browser, launch this process through Command M
+- to get console logs its the same as xcode where you load the debugger through the browser, launch this process through Command M
 
 - sometimes the Node package manager will fail to launch, if this happens launch a terminal window, navigate to the top level of the project which is above the android folder and inside it run `react-native start`
+
+
+
 
 
 

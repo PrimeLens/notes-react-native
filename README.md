@@ -104,11 +104,27 @@ Append these lines to bash_profile, save the file and *restart your terminal win
 
 - sometimes the Node package manager will fail to launch, if this happens launch a terminal window, navigate to the top level of the project which is above the android folder and inside it run `react-native start`
 
+# Intercom Integration
 
+    // there is not functionality for a visitor aka non-logged in user aka lead generation
+    // like you do on the website version if intercom
+    // therefore .displayMessageComposer should happen after we have user context
+    import Intercom from 'react-native-intercom';
+    Intercom.registerIdentifiedUser({userId: 87});
+    Intercom.displayMessageComposer();
+    // dont make the following calls
+    // Intercom.registerIdentifiedUser({userId: undefined});
+    // Intercom.registerIdentifiedUser({});
 
+# React Native WebView
 
-
-
+    // bounces prop remove the pull down to refresh on Android and the annoying bounce in browsers 
+    // when pull page down
+    import { WebView } from 'react-native';
+    <WebView
+      bounces={false}
+      source={{uri: 'http://etc'}}
+      style={{marginTop: 20}} />
 
 
 

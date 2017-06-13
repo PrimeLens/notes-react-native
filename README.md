@@ -29,7 +29,9 @@
 
 ### iOS Two ways to run app
 
-1. use xcode to open `myApp.xcodeproj` from within `.ios`
+_Important:  Xcode freaks out and errors if any parent folder to the project has a name with a space in it!!_
+
+1. right click on `/ios/myApp.xcodeproj` and open it with xcode
 
 2. run following command in terminal from the root of myApp project folder
 
@@ -118,13 +120,15 @@ Append these lines to bash_profile, save the file and *restart your terminal win
 
 # React Native WebView
 
-    // bounces prop remove the pull down to refresh on Android and the annoying bounce in browsers 
-    // when pull page down
     import { WebView } from 'react-native';
     <WebView
       bounces={false}
       source={{uri: 'http://etc'}}
       style={{marginTop: 20}} />
+
+- There maybe an error loading pages in the WebView due to non-secure connections (http as opposed to https). Some info here [LINK](http://blog.bigbinary.com/2016/07/27/open-non-https-sites-in-webview-in-react-native.html). I edite the plist.info as shown in the article but under `App Transport Security Settings` I added a row (using the dropdown) and selected `Allow Arbitrary Loads in Web Content` which I set to `YES`
+- bounces prop removes the "pull down to refresh" on Android 
+- removes annoying bounce behavior like we see in browsers when we pull the page down 
 
 
 

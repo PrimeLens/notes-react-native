@@ -113,7 +113,7 @@ Append these lines to bash_profile, save the file and *restart your terminal win
     <Text></Text>               // equates roughly to a <p>
     <StatusBar hidden={true}/>  // to hide the status bar
 
-# Combining the code source root 
+# Combining the code source into one file 
 `index.ios.js` and `index.andoid.js` can both look like this
 
     import {AppRegistry} from 'react-native';
@@ -135,6 +135,16 @@ with `./src/index.js` looking like this
       }
     }
     module.exports = myFirstRNApp;
+
+# Using relative paths instead of absolute 
+
+Put `"name": "root_dir",` at the top level of `package.json` then 
+
+    import myFirstRNApp from './src/index.js';
+
+becomes
+
+    import myFirstRNApp from 'root_dir/src/index.js';
 
 # Intercom Integration
 

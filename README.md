@@ -106,6 +106,36 @@ Append these lines to bash_profile, save the file and *restart your terminal win
 
 - sometimes the Node package manager will fail to launch, if this happens launch a terminal window, navigate to the top level of the project which is above the android folder and inside it run `react-native start`
 
+# Basic RN Elements
+
+    import {AppRegistry, Text, View, StatusBar} from 'react-native';
+    <View></View>               // equates roughly to a <div>
+    <Text></Text>               // equates roughly to a <p>
+    <StatusBar hidden={true}/>  // to hide the status bar
+
+# Combining the code source root 
+`index.ios.js` and `index.andoid.js` can both look like this
+
+    import {AppRegistry} from 'react-native';
+    import myFirstRNApp from './src/index.js';
+    AppRegistry.registerComponent('myFirstRNApp', () => myFirstRNApp);
+
+with `./src/index.js` looking like this
+
+    import React, {Component} from 'react';
+    import {StatusBar,Text,View} from 'react-native';
+    class myFirstRNApp extends Component {
+      render() {
+        return (
+          <View>
+            <StatusBar hidden={true}/>
+            <Text>hello</Text>
+          </View>
+        );
+      }
+    }
+    module.exports = myFirstRNApp;
+
 # Intercom Integration
 
     // there is not functionality for a visitor aka non-logged in user aka lead generation

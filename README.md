@@ -181,7 +181,7 @@ Example use (similar to my react boilerplates)
       source={{uri: 'http://etc'}}
       style={{marginTop: 20}} />
 
-- There maybe an error loading pages in the WebView due to non-secure connections (http as opposed to https). Some info here [LINK](http://blog.bigbinary.com/2016/07/27/open-non-https-sites-in-webview-in-react-native.html). I edited the plist.info as shown in the article but under `App Transport Security Settings` I added a row (using the dropdown) and selected `Allow Arbitrary Loads in Web Content` which I set to `YES`
+- There maybe an error loading pages in the WebView due to non-secure connections (http as opposed to https). Some info here [LINK](http://blog.bigbinary.com/2016/07/27/open-non-https-sites-in-webview-in-react-native.html). I edited the plist.info as shown in jpg in the article but under `App Transport Security Settings` I added a row (using the dropdown) and selected `Allow Arbitrary Loads in Web Content` which I set to `YES`
 - bounces prop removes the "pull down to refresh" on Android and removes annoying bounce behavior like we see in browsers when we pull the page down 
 
 See here [For my notes on WebView Bridge communication between RN and the JS in the web page](./webview-bridge.md)

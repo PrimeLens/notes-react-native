@@ -16,11 +16,12 @@
       // unlike in my boilerplates, unbinding requires the pointer to the callback
       dispatcher
       .removeListener('sendWVmessage', this.sendWVmessage) 
-      .on('sendWVmessage', this.sendWVmessage);
+      .addListener('sendWVmessage', this.sendWVmessage);
     }
 
-    // send WebView message
-    sendWVmessage(messageStr){
+    // send WebView message, use arrow func so this will not 
+    // point to the dispatcher itself
+    sendWVmessage = (messageStr) => {
       if (typeof messageStr !== 'string') {
         messageStr = JSON.stringify(messageStr);
       }
@@ -93,6 +94,7 @@
 
 
     // for sending messages
+    // see my repo Bevent.js for a web based dispatcher
     window.dispatcher.off('forWebView').on('forWebView', (message)=>{
       if (typeof message !== 'object'){
         alert('Attempting to send message to React Native that is not JSON');

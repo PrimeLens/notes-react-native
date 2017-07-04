@@ -113,6 +113,74 @@ Append these lines to bash_profile, save the file and *restart your terminal win
     <Text></Text>               // equates roughly to a <p>
     <StatusBar hidden={true}/>  // to hide the status bar
 
+# Basic styling
+
+    import {StyleSheet} from 'react-native';
+    <Text style={styles.myText}>John Wick</Text>
+    // note the square brackets
+    <Text style={[styles.myText, styles.selectedText]}>Han Solo</Text>
+then
+
+    const styles = StyleSheet.create({
+      myText: {
+        fontSize: 22,
+        padding: 10,
+        margin: 5,
+        borderWidth: StyleSheet.hairlineWidth,
+        color: 'black'
+      },
+      selectedText: {
+        backgroundColor: 'yellow',
+        color: 'blue',
+        fontWeight: 'bold'
+      }
+    });
+
+# Basic flex box positioning
+
+    <View style={styles.container}>
+      <Text style={styles.myText}>John Wick</Text>
+      <Text style={styles.myText}>Han Solo</Text>
+      <Text style={styles.myText}>Mad Max</Text>
+    </View>
+
+There is a flex container and flex children, even though this is one rule on the container it creates effects on the flex children
+
+    const styles = StyleSheet.create({
+      container: {
+        backgroundColor: '#DDD',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        justifyContent: 'space-around'
+        // justifyContent: 'flex-start' // is left ,this is the default
+        // justifyContent: 'flex-end' // is right
+        // justifyContent: 'space-between' // will distribute
+        // justifyContent: 'space-around' // will distribute
+      }
+    }
+
+# Using images
+
+    import {Images} from 'react-native';
+    import furyRoadPic from './furyroad.jpg'; // like webpack
+    import openingScene from './openscene.jpg';
+Images can contain elements
+
+    <Image source={furyRoadPic}/>
+    <Image source={openingScene} style={styles.lowerRight}>
+      <Text style={styles.caption}>Opening Scene</Text>
+    </Image>
+    const styles = StyleSheet.create({
+      lowerRight: {
+        justifyContent: 'flex-end',
+        alignItems: 'flex-end'
+      },
+      caption: {
+        backgroundColor: 'rgba(256,256,256,.35)',
+        fontSize: 12
+      }
+    }   
+
 # Combining the code source into one file 
 `index.ios.js` and `index.andoid.js` can both look like this
 

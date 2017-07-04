@@ -216,16 +216,16 @@ becomes
 
 # Dispatcher
 
-    var Events = require('events');
+    import EventEmitter from 'EventEmitter';
     // Create an dispatcher instance
-    var dispatcher = new Events.EventEmitter();
+    var dispatcher = new EventEmitter();
     module.exports = dispatcher;
 
 Example use (similar to my react boilerplates)
 
     import dispatcher from './dispatcher';
     dispatcher.emit('doSomething', payload);
-    dispatcher.on('doSomething', (payload)=>{
+    dispatcher.addListener('doSomething', (payload)=>{
       // do something
     });
 

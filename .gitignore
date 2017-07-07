@@ -1,3 +1,10 @@
+basic-structure/myApp/__tests__/
+basic-structure/myApp/android/
+basic-structure/myApp/app.json
+basic-structure/myApp/ios/
+basic-structure/myApp/package.json
+
+
 **/keys.js
 ./aws/keys.js
 .idea

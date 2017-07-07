@@ -250,7 +250,9 @@ See here [For my notes on WebView Bridge communication between RN and the JS in 
 
 # Tricks on Troubleshooting Android
 
+- <strong>androidKey.jks</strong> set path in > android > app > build.gradle > androidKey.jks
 
+- <strong>Physical android devices</strong> are better than the emulator, you will need to google how to turn on developer mode for that particular device, then plug in and it should appear in the list with the emulators
 
 
 

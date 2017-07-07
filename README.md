@@ -229,18 +229,6 @@ Example use (similar to my react boilerplates)
       // do something
     });
 
-# Intercom Integration
-
-    // there is not functionality for a visitor aka non-logged in user aka lead generation
-    // like you do on the website version if intercom
-    // therefore .displayMessageComposer should happen after we have user context
-    import Intercom from 'react-native-intercom';
-    Intercom.registerIdentifiedUser({userId: 87});
-    Intercom.displayMessageComposer();
-    // dont make the following calls
-    // Intercom.registerIdentifiedUser({userId: undefined});
-    // Intercom.registerIdentifiedUser({});
-
 # React Native WebView
 
     import { WebView } from 'react-native';
@@ -253,6 +241,14 @@ Example use (similar to my react boilerplates)
 - bounces prop removes the "pull down to refresh" on Android and removes annoying bounce behavior like we see in browsers when we pull the page down 
 
 See here [For my notes on WebView Bridge communication between RN and the JS in the web page](./webview-bridge.md)
+
+# Tricks on Troubleshooting iOS
+
+- <strong>Delete the derived data.</strong>  Xcode > preferences.  Then the top row of icons choose locations. The top part is where you set the Derived Data folder but it alos displays the current path. Use the operating system to go to this path and delete the contents. Tip: clicking the tiny arrow next to the path should open the window.
+
+- <strong>Run a clean.</strong> Top menu > Product > Clean
+
+# Tricks on Troubleshooting Android
 
 
 

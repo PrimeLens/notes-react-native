@@ -275,5 +275,5 @@ See here [For my notes on WebView Bridge communication between RN and the JS in 
 
 - <strong>Physical android devices</strong> are better than the emulator, you will need to google how to turn on developer mode for that particular device, then plug in and it should appear in the list with the emulators
 
-
+- <strong>When android emulator just shows white screen</strong> the app in the memory of the phone needs to be closed. Use the emulator screen to tap the square (circle, triangle, square buttons) on lower portion of the display. Then close the app.
 

@@ -179,7 +179,26 @@ Images can contain elements
         backgroundColor: 'rgba(256,256,256,.35)',
         fontSize: 12
       }
-    }   
+    } 
+
+
+# Detect Tap
+
+Some online examples say `this.handleChange = this.handleChange.bind(this)` but please use the technique below instead<br/>[<i>relevant link</i>](https://medium.com/@machnicki/handle-events-in-react-with-arrow-functions-ede88184bbb)
+
+    handlePress(arg){
+      this.setState({phrase: arg}); // John Wick
+    }
+    <Text onPress={()=>this.handlePress('John Wick')}>John Wick</Text>
+
+To have a flash of color happen when it is tapped use TouchableHighlight. Note that font styles should be on the inner Text element and button styles should be on TouchableHighlight
+
+    import {TouchableHighlight} from 'react-native';
+    <TouchableHighlight
+      onPress={()=>this.handlePress('Eren Yeager')}
+      underlayColor="orange">
+       <Text style={styles.myText}>Eren Yeager</Text>
+    </TouchableHighlight>
 
 # Combining the code source into one file 
 `index.ios.js` and `index.andoid.js` can both look like this
@@ -228,6 +247,8 @@ Example use (similar to my react boilerplates)
     dispatcher.addListener('doSomething', (payload)=>{
       // do something
     });
+
+  <i>note to unbind an event listener you cannot use an anonymous function as the pointer to the callback is needed in `.removeListener()`</i>
 
 # React Native WebView
 

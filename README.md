@@ -263,17 +263,22 @@ Example use (similar to my react boilerplates)
 
 See here [For my notes on WebView Bridge communication between RN and the JS in the web page](./webview-bridge.md)
 
-# Tricks on Troubleshooting iOS
+# Emulator - Tricks on Troubleshooting iOS
 
 - <strong>Delete the derived data.</strong>  Xcode > preferences.  Then the top row of icons choose locations. The top part is where you set the Derived Data folder but it alos displays the current path. Use the operating system to go to this path and delete the contents. Tip: clicking the tiny arrow next to the path should open the window.
 
 - <strong>Run a clean.</strong> Top menu > Product > Clean
 
-# Tricks on Troubleshooting Android
+# Emulator - Tricks on Troubleshooting Android
 
 - <strong>androidKey.jks</strong> set path in > android > app > build.gradle > androidKey.jks
 
 - <strong>Physical android devices</strong> are better than the emulator, you will need to google how to turn on developer mode for that particular device, then plug in and it should appear in the list with the emulators
 
 - <strong>When android emulator just shows white screen</strong> the app in the memory of the phone needs to be closed. Use the emulator screen to tap the square (circle, triangle, square buttons) on lower portion of the display. Then close the app.
+
+# Deploy Android APK to a physical phone
+
+[Deploy Android APK to a physical phone](./deployAPK/deployAPK.md)
+
 

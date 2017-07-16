@@ -108,10 +108,23 @@ Append these lines to bash_profile, save the file and *restart your terminal win
 
 # Basic RN Elements
 
-    import {AppRegistry, Text, View, StatusBar} from 'react-native';
-    <View></View>               // equates roughly to a <div>
+    import {AppRegistry, Text, View, ScrollView, StatusBar} from 'react-native';
+    <View></View>               // equates roughly to a <div> but cannot scroll
+    <ScrollView></ScrollView>   // view that can scroll
     <Text></Text>               // equates roughly to a <p>
     <StatusBar hidden={true}/>  // to hide the status bar
+-
+
+    import {ListView} from 'react-native';
+    constructor() {
+      super();
+      const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+      this.state = {dataSource: ds.cloneWithRows(['Harry', 'Hermione'])};
+    }
+    <ListView
+      dataSource={this.state.dataSource}
+      renderRow={(item)=> <Text>{item}</Text>}
+      renderHeader={ ()=> <Text>My Header</Text>}/>
 
 # Basic styling
 

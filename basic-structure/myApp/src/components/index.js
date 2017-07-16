@@ -14,12 +14,10 @@ import furyRoadPic from './furyroad.jpg';
 import openingScene from './openscene.jpg';
 
 
-console.log('FIRED');
 class IndexComponent extends Component {
   constructor(props) {
     super(props);
     this.state = { phrase : '' }; 
-    console.log('FIRED');
   }
   handlePress(arg){
     console.log('Tapped on ',arg);

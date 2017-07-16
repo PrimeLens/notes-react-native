@@ -113,7 +113,7 @@ Append these lines to bash_profile, save the file and *restart your terminal win
     <ScrollView></ScrollView>   // view that can scroll
     <Text></Text>               // equates roughly to a <p>
     <StatusBar hidden={true}/>  // to hide the status bar
--
+ListView scrolls by default
 
     import {ListView} from 'react-native';
     constructor() {
@@ -125,6 +125,20 @@ Append these lines to bash_profile, save the file and *restart your terminal win
       dataSource={this.state.dataSource}
       renderRow={(item)=> <Text>{item}</Text>}
       renderHeader={ ()=> <Text>My Header</Text>}/>
+Text Input, clear it with refs and the `clear()` method
+
+    import {TextInput} from 'react-native';
+    <TextInput 
+      ref={ref => this.textInputRef = ref}
+      placeholder="enter something"
+      onChangeText={(s) => this.setState({myString:s})}/>
+    <Text
+      onPress={
+        ()=>{
+          this.setState({myString: ''});
+          this.textInputRef.clear();
+        }
+      }>Clear</Text>
 
 # Basic styling
 

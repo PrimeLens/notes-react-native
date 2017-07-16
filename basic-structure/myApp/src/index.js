@@ -10,8 +10,8 @@ import {
   Image
 } from 'react-native';
 
-import furyRoadPic from './furyroad.jpg';
-import openingScene from './openscene.jpg';
+import furyRoadPic from 'myApp/src/images/furyroad.jpg';
+import openingScene from 'myApp/src/images/openscene.jpg';
 
 
 class IndexComponent extends Component {

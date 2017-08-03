@@ -21,7 +21,7 @@
 
 ### iOS Setting up a new app
 
-    $ react-native init myApp
+    react-native init myApp
 
 - inside myApp's folder doing `react-native --version` will provide extra info
 - project folder structure has `\ios` and `\android` but most of your work will be outside of these at the root level
@@ -35,7 +35,7 @@ _Important:  Xcode freaks out and errors if any parent folder to the project has
 
 2. run following command in terminal from the root of myApp project folder
 
-    $ react-native run-ios
+    react-native run-ios
 
 - note the react packager terminal window which manages your react bundle
 - `command-shift-h` in the simulator takes you back to the home screen
@@ -303,6 +303,24 @@ See here [For my notes on WebView Bridge communication between RN and the JS in 
 - <strong>Physical android devices</strong> are better than the emulator, you will need to google how to turn on developer mode for that particular device, then plug in and it should appear in the list with the emulators
 
 - <strong>When android emulator just shows white screen</strong> the app in the memory of the phone needs to be closed. Use the emulator screen to tap the square (circle, triangle, square buttons) on lower portion of the display. Then close the app.
+
+# Flushing out the caches
+
+    watchman watch-del-all
+    rm -rf node_modules
+    rm -rf $TMPDIR/react-*
+    rm -rf $TMPDIR/npm-*
+    rm -rf ios/Pods
+    npm install
+    ./android /gradlew clean -p ./android/
+    rm -rf ios/build
+    npm start -- --reset-cache
+
+from [link](https://medium.com/react-native-training/updating-your-react-native-app-a724c996a76d) if using pod inset the line below 
+
+    pod cache clean --all
+    pod repo update && pod install
+
 
 # Deploy Android APK to a physical phone
 

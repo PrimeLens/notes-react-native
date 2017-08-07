@@ -319,6 +319,7 @@ See here [For my notes on WebView Bridge communication between RN and the JS in 
     // all in one line
     watchman watch-del-all; rm -rf node_modules; rm -rf $TMPDIR/react-*; rm -rf $TMPDIR/npm-*; rm -rf ios/Pods; npm install; ./android /gradlew clean -p ./android/; rm -rf ios/build; npm start -- --reset-cache
 
+_* * * make sure you delete the derived data as well * * *_<br/>
 from [link](https://medium.com/react-native-training/updating-your-react-native-app-a724c996a76d) if using pod inset the line below 
 
     pod cache clean --all

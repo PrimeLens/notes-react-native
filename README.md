@@ -294,6 +294,8 @@ See here [For my notes on WebView Bridge communication between RN and the JS in 
 
 - <strong>Delete the derived data.</strong>  Xcode > preferences.  Then the top row of icons choose locations. The top part is where you set the Derived Data folder but it alos displays the current path. Use the operating system to go to this path and delete the contents. Tip: clicking the tiny arrow next to the path should open the window.
 
+- <strong>Xcode should open the react-native packager, dont start it yourself</strong>
+
 - <strong>Run a clean.</strong> Top menu > Product > Clean
 
 # Emulator - Tricks on Troubleshooting Android
@@ -319,7 +321,7 @@ See here [For my notes on WebView Bridge communication between RN and the JS in 
     // all in one line
     watchman watch-del-all; rm -rf node_modules; rm -rf $TMPDIR/react-*; rm -rf $TMPDIR/npm-*; rm -rf ios/Pods; npm install; ./android /gradlew clean -p ./android/; rm -rf ios/build; npm start -- --reset-cache
 
-_* * * make sure you delete the derived data as well * * *_<br/>
+_* * * make sure you delete the derived data as well and let xcode open the react-native packager * * *_<br/>
 from [link](https://medium.com/react-native-training/updating-your-react-native-app-a724c996a76d) if using pod inset the line below 
 
     pod cache clean --all

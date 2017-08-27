@@ -250,6 +250,10 @@ with `./src/index.js` looking like this
     }
     module.exports = myFirstRNApp;
 
+# Async Store
+
+
+
 # Using relative paths instead of absolute 
 
 Put `"name": "root_dir",` at the top level of `package.json` then 

@@ -1,3 +1,9 @@
+# OUT OF DATE, SEE EXPO
+
+<hr/>
+<hr/>
+<hr/>
+
 # Intro Notes
 
 - I will use RN as shorthand for React Native
